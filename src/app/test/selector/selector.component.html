@@ -1,0 +1,9 @@
+<!-- <select name="" id="">
+    <option *ngFor="let l of toppingList"  value="l">{{l}}</option>
+</select> -->
+<mat-form-field appearance="fill">
+  <mat-label>Select an option</mat-label>
+  <mat-select [(ngModel)]="selection" (selectionChange)="setChangeSelection()">
+    <mat-option *ngFor="let ls of list" [value]="ls">{{ls}}</mat-option>
+  </mat-select>
+</mat-form-field>
